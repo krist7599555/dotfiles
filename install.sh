@@ -11,5 +11,5 @@ else
     echo "Adding PATH Done"
 fi 
 
-chmod +x "$installed_dir/x*"
+chmod -R +x "$installed_dir"
 x version
