@@ -3,7 +3,7 @@
 file with install to `$HOME/.x`
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/krist7599555/x/main/x/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/krist7599555/x/main/install.sh)"
 ```
 
 ## XPEEK
