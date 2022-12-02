@@ -1,7 +1,9 @@
 #!/bin/bash
 root_dir=$(dirname $(realpath $0))
 
-if [[ "$1" == "update" ]]; then
+if [[ "$1" == "version" ]]; then
+    git log --pretty=format:"version: %h%ncommit: %s%nlastupdate: %ar" | head -3
+elif [[ "$1" == "update" ]]; then
     cd "$root_dir"
     echo "Git Pulling..."
     git pull
@@ -16,6 +18,7 @@ else
         x - Krist Custom Cli
 
         command not found, try
+            x version
             x update                  --- update from github
             x peek [file]             --- show file content in terminal
             x sim                     --- simualte xcode

@@ -1,9 +1,9 @@
 # util cli use by me
 
-add path to `.zshrc`
+file with install to `$HOME/.x`
 
 ```bash
-export PATH="$HOME/dotfiles:$PATH"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/krist7599555/x/main/x/install.sh)"
 ```
 
 ## XPEEK
