@@ -1,0 +1,35 @@
+#!/bin/bash
+
+function xpeek() {
+
+    for dep in tiv bat; do
+        if ! [[ -x "$(command -v $dep)" ]]; then
+            echo "Installing dependency - $dep"
+            brew install $dep
+        fi
+    done
+
+    if [[ $@ =~ "help" ]] || [[ $# -eq 0 ]]; then
+        local __doc__="
+            Peek file in terminal
+            
+            Usage: xpeek [file]
+            
+            switch(file):
+                case *.{png,jpg,gif}: tiv file
+                default:              bat file
+        "
+        echo "$__doc__" | cut -b 13- | sed '$d' | sed '1d'
+        return
+    fi
+
+    if [[ $1 =~ .*\.(png$|jpg$|jpeg$|gif$) ]]; then
+        tiv -w 50 -h 30 -256 "$1"
+        return
+    else
+        bat --color always --theme=Dracula "$1"
+        return
+    fi
+}
+
+xpeek "$@"
