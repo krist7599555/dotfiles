@@ -6,6 +6,13 @@ file with install to `$HOME/.x`
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/krist7599555/x/main/install.sh)"
 ```
 
+after that you can run
+
+```bash
+x version
+x update
+```
+
 ## XPEEK
 
 peek file interminal use `tiv` and `bat`
