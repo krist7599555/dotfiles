@@ -24,7 +24,8 @@ function xpeek() {
     fi
 
     if [[ $1 =~ .*\.(png$|jpg$|jpeg$|gif$) ]]; then
-        tiv -w 50 -h 30 -256 "$1"
+#         tiv -w 50 -h 30 -256 "$1"
+        tiv -f -256 "$1"
         return
     else
         bat --color always --theme=Dracula "$1"
