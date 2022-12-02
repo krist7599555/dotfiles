@@ -7,7 +7,7 @@ if [[ :$PATH: == *:"$installed_dir":* ]] ; then
 else
     echo "Adding PATH $installed_dir to .zshrc"
     export PATH="$installed_dir:$PATH"
-    echo "export PATH=\"$installed_dir:\$PATH\"" >> .zshrc
+    echo "export PATH=\"$installed_dir:\$PATH\"" >> ~/.zshrc
     echo "Adding PATH Done"
 fi 
 
