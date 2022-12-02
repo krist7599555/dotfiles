@@ -2,6 +2,7 @@
 root_dir=$(dirname $(realpath $0))
 
 if [[ "$1" == "version" ]]; then
+    cd "$root_dir"
     git log --pretty=format:"version: %h%ncommit: %s%nlastupdate: %ar" | head -3
 elif [[ "$1" == "update" ]]; then
     cd "$root_dir"
