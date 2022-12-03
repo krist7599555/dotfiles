@@ -87,7 +87,7 @@ function xsim() {
         echo "Boot UUID $uuid"
         xcrun simctl boot $uuid
         echo "Done"
-
+        return
     fi
 
     echo "command not found"
